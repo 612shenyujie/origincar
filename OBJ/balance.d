@@ -76,3 +76,4 @@
 ..\obj\balance.o: ..\HARDWARE\MPU6050\MPU6050.h
 ..\obj\balance.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\balance.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\balance.o: ..\BALANCE\PID.h

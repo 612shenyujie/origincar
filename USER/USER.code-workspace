@@ -4,10 +4,6 @@
             "path": "."
         }
     ],
-    "settings": {
-        "files.associations": {
-            "LED.C": "cpp"
-        }
-    },
+    "settings": {},
     "extensions": {}
 }

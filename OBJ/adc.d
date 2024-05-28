@@ -59,6 +59,7 @@
 ..\obj\adc.o: ..\SYSTEM\delay\delay.h
 ..\obj\adc.o: ..\BALANCE\balance.h
 ..\obj\adc.o: ..\BALANCE\system.h
+..\obj\adc.o: ..\BALANCE\PID.h
 ..\obj\adc.o: ..\HARDWARE\led.h
 ..\obj\adc.o: ..\HARDWARE\oled.h
 ..\obj\adc.o: ..\HARDWARE\usartx.h

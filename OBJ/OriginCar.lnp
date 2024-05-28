@@ -37,6 +37,7 @@
 "..\obj\balance.o"
 "..\obj\robot_select_init.o"
 "..\obj\show.o"
+"..\obj\pid.o"
 "..\obj\mpu6050.o"
 "..\obj\i2c.o"
 --strict --scatter "..\OBJ\OriginCar.sct"

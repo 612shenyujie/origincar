@@ -59,6 +59,7 @@
 ..\obj\i2c.o: ..\SYSTEM\delay\delay.h
 ..\obj\i2c.o: ..\BALANCE\balance.h
 ..\obj\i2c.o: ..\BALANCE\system.h
+..\obj\i2c.o: ..\BALANCE\PID.h
 ..\obj\i2c.o: ..\HARDWARE\led.h
 ..\obj\i2c.o: ..\HARDWARE\oled.h
 ..\obj\i2c.o: ..\HARDWARE\usartx.h

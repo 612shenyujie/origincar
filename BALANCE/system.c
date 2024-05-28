@@ -1,4 +1,7 @@
 #include "system.h"
+#include "PID.h"
+
+
 
 //Robot software fails to flag bits
 //机器人软件失能标志位
@@ -193,5 +196,9 @@ void systemInit(void)
 	
 	//PS2 gamepad configuration is initialized and configured in analog mode
   //PS2手柄配置初始化,配置为模拟量模式	
-	PS2_SetInit();		 							
+	PS2_SetInit();	
+
+	//PID参数初始化
+	motor_pid_init();
+	
 }

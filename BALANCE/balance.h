@@ -2,6 +2,8 @@
 #define __BALANCE_H			  	 
 #include "sys.h"
 #include "system.h"
+#include "PID.h"
+
 
 #define BALANCE_TASK_PRIO		4     //Task priority //任务优先级
 #define BALANCE_STK_SIZE 		512   //Task stack size //任务堆栈大小
@@ -35,5 +37,6 @@ void Smooth_control(float vx,float vy,float vz);
 void PS2_control(void);
 float float_abs(float insert);
 void robot_mode_check(void);
+void motor_pid_init(void);
 #endif  
 

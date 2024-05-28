@@ -59,6 +59,7 @@
 ..\obj\can.o: ..\SYSTEM\delay\delay.h
 ..\obj\can.o: ..\BALANCE\balance.h
 ..\obj\can.o: ..\BALANCE\system.h
+..\obj\can.o: ..\BALANCE\PID.h
 ..\obj\can.o: ..\HARDWARE\led.h
 ..\obj\can.o: ..\HARDWARE\oled.h
 ..\obj\can.o: ..\HARDWARE\usartx.h

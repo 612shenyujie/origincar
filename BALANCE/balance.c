@@ -8,6 +8,9 @@ int robot_mode_check_flag=0;
 
 short test_num;
 
+float Motor_A_V_Pid[10]= {48000.f,3000.0f,20000.f,16700.0f,8000.0f,0.0f,0.f,0.f,0.f,0.f};
+float Motor_B_V_Pid[10]= {48000.f,3000.0f,20000.f,16700.0f,8000.0f,0.0f,0.f,0.f,0.f,0.f};
+
 Encoder OriginalEncoder; //Encoder raw data //编码器原始数据
 
 u8 command_lost_count=0; //串口、CAN控制命令丢失时间计数，丢失1秒后停止控制
@@ -211,11 +214,12 @@ void Balance_task(void *pvParameters)
            //Speed closed-loop control to calculate the PWM value of each motor, 
 					 //PWM represents the actual wheel speed					 
 					 //速度闭环控制计算各电机PWM值，PWM代表车轮实际转速
-					 MOTOR_A.Motor_Pwm=Incremental_PI_A(MOTOR_A.Encoder, MOTOR_A.Target);
-					 MOTOR_B.Motor_Pwm=Incremental_PI_B(MOTOR_B.Encoder, MOTOR_B.Target);
-					 MOTOR_C.Motor_Pwm=Incremental_PI_C(MOTOR_C.Encoder, MOTOR_C.Target);
-					 MOTOR_D.Motor_Pwm=Incremental_PI_D(MOTOR_D.Encoder, MOTOR_D.Target);
-						 
+//					 MOTOR_A.Motor_Pwm=Incremental_PI_A(MOTOR_A.Encoder, MOTOR_A.Target);
+//					 MOTOR_B.Motor_Pwm=Incremental_PI_B(MOTOR_B.Encoder, MOTOR_B.Target);
+//					 MOTOR_C.Motor_Pwm=Incremental_PI_C(MOTOR_C.Encoder, MOTOR_C.Target);
+//					 MOTOR_D.Motor_Pwm=Incremental_PI_D(MOTOR_D.Encoder, MOTOR_D.Target);
+						 MOTOR_A.Motor_Pwm=PID_Calculate(&Motor_A_Pid,MOTOR_A.Encoder,MOTOR_A.Target);
+						 MOTOR_B.Motor_Pwm=PID_Calculate(&Motor_B_Pid,MOTOR_B.Encoder,MOTOR_B.Target);
 					 Limit_Pwm(16700);
 					 
 					 //Set different PWM control polarity according to different car models
@@ -746,4 +750,10 @@ void robot_mode_check(void)
 	//If the output is close to full amplitude for 6 times in a row, it is judged that the motor rotates wildly and makes the motor incapacitated
 	//如果连续6次接近满幅输出，判断为电机乱转，让电机失能	
 	if(error>6) EN=0,Flag_Stop=1,robot_mode_check_flag=1;  
+}
+
+void motor_pid_init(void)
+{
+	PID_Init(&Motor_A_Pid,Motor_A_V_Pid,Integral_Limit);
+	PID_Init(&Motor_B_Pid,Motor_B_V_Pid,Integral_Limit);
 }

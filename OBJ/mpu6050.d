@@ -60,6 +60,7 @@
 ..\obj\mpu6050.o: ..\SYSTEM\delay\delay.h
 ..\obj\mpu6050.o: ..\BALANCE\balance.h
 ..\obj\mpu6050.o: ..\BALANCE\system.h
+..\obj\mpu6050.o: ..\BALANCE\PID.h
 ..\obj\mpu6050.o: ..\HARDWARE\led.h
 ..\obj\mpu6050.o: ..\HARDWARE\oled.h
 ..\obj\mpu6050.o: ..\HARDWARE\usartx.h

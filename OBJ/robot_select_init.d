@@ -59,6 +59,7 @@
 ..\obj\robot_select_init.o: ..\SYSTEM\delay\delay.h
 ..\obj\robot_select_init.o: ..\BALANCE\balance.h
 ..\obj\robot_select_init.o: ..\BALANCE\system.h
+..\obj\robot_select_init.o: ..\BALANCE\PID.h
 ..\obj\robot_select_init.o: ..\HARDWARE\led.h
 ..\obj\robot_select_init.o: ..\HARDWARE\oled.h
 ..\obj\robot_select_init.o: ..\HARDWARE\usartx.h

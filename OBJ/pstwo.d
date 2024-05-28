@@ -59,6 +59,7 @@
 ..\obj\pstwo.o: ..\FreeRTOS\include\semphr.h
 ..\obj\pstwo.o: ..\BALANCE\balance.h
 ..\obj\pstwo.o: ..\BALANCE\system.h
+..\obj\pstwo.o: ..\BALANCE\PID.h
 ..\obj\pstwo.o: ..\HARDWARE\led.h
 ..\obj\pstwo.o: ..\HARDWARE\oled.h
 ..\obj\pstwo.o: ..\HARDWARE\usartx.h

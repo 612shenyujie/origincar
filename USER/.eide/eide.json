@@ -13,6 +13,9 @@
         "name": "Balance",
         "files": [
           {
+            "path": "../BALANCE/system.c"
+          },
+          {
             "path": "../BALANCE/balance.c"
           },
           {
@@ -20,9 +23,6 @@
           },
           {
             "path": "../BALANCE/show.c"
-          },
-          {
-            "path": "../BALANCE/system.c"
           }
         ],
         "folders": []
